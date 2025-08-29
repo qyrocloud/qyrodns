@@ -88,6 +88,8 @@ curl localhost:5301/admin/api/v1/namespaces/$NAMESPACE_ID/records -H "Authorizat
 curl localhost:5301/admin/api/v1/namespaces/$NAMESPACE_ID/records -H "Authorization: Bearer $ADMIN_TOKEN" -XPOST -d '{"name": "example.com", "type": "A", "value": "192.168.0.106", "ttl": 60, "class": "IN"}'
 ```
 
+Set CNAME records
+
 ```shell
 curl localhost:5301/admin/api/v1/namespaces/$NAMESPACE_ID/records -H "Authorization: Bearer $ADMIN_TOKEN" -XPOST -d '{"name": "www.example.com", "type": "CNAME", "value": "example.github.io", "ttl": 60, "class": "IN"}'
 ```
