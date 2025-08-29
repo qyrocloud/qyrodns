@@ -8,6 +8,21 @@ QyroDNS
 
 -------------
 
+#### From docker
+
+```shell
+docker run -d \
+  --name qyrodns \
+  -e MONGO_ENDPOINT="mongodb://host.docker.internal:27017" \
+  -p 5300:5300/udp \
+  -p 5301:5301/tcp \
+  qyrocloud/qyrodns:1.0
+```
+
+Please remember to set critical environment variables mentioned below in production.
+
+#### From  Source Code
+
 ```shell
 git clone https://github.com/qyrocloud/qyrodns
 cd qyrodns
